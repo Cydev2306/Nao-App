@@ -3,7 +3,7 @@ import datetime
 import time
 from naoqi import ALProxy
 
-from PIL import Image
+import Image
 
 def miniature(IP, PORT, nomVideo):
   camProxy = ALProxy("ALVideoDevice", IP, PORT)

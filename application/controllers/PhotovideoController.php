@@ -20,7 +20,7 @@ class PhotovideoController extends Zend_Controller_Action
     {
     	if(isset($_GET['nomImg']))
     	{
-	    	$file = APPLICATION_PATH.'/../public/imgNao/'.$_GET['nomImg'];
+	    	$file = APPLICATION_PATH.'/../public'.$_GET['nomImg'];
 	    	$this->_helper->layout()->disableLayout();
 	    	$this->_helper->viewRenderer->setNoRender(true);
 	    	if (file_exists($file))
@@ -46,7 +46,7 @@ class PhotovideoController extends Zend_Controller_Action
     	{
     		if(isset($_GET['nomVideo']))
     		{
-    			$file = APPLICATION_PATH.'/../public/imgNao/'.$_GET['nomVideo'];
+    			$file = APPLICATION_PATH.'/../public'.$_GET['nomVideo'];
     			$this->_helper->layout()->disableLayout();
     			$this->_helper->viewRenderer->setNoRender(true);
     			if (file_exists($file))

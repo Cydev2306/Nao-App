@@ -6,7 +6,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 	{
 		parent::run();
 	}
-	
+
 	protected function _initDoctype() 
 	{
 		$this->bootstrap('view');
@@ -36,7 +36,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		$db = $this->getResource('db');
 		Zend_Db_Table::setDefaultAdapter($db);
 	}
-	
 	protected function _initView()
 	{
 	    // Initialize view

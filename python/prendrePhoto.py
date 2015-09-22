@@ -5,9 +5,9 @@
 import sys
 import datetime
 import time
+import PIL
 
 # Python Image Library
-
 from PIL import Image
 from naoqi import ALProxy
 

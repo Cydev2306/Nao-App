@@ -16,7 +16,7 @@ class CronController extends Zend_Controller_Action {
         if (!empty($nonformatee)) {
             foreach ($nonformatee as $unevideo) {
                 //on va chercher la video sur le robot
-                exec('scp nao@nao.local:/home/nao/recordings/cameras/record.avi /home/matthieu/nao/public/videoNao/record.avi', $outputScp, $returnScp);
+                exec('scp nao@nao.local:/home/nao/recordings/cameras/record.avi /Applications/MAMP/htdocs/Nao-App/public/videoNao/record.avi', $outputScp, $returnScp);
                 //on convertit la video en mp4
                 exec('python ' . $cheminPython . '/convertVideo.py "' . $unevideo['nomVideo'] . '.mp4"', $outputConvert, $returnConvert);
                 //on update la ligne en base pour dire que la vidéo est convertie
